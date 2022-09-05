@@ -1,5 +1,5 @@
 
-Shader "Unity Shaders Book/ Chapter 5/ Simple Shader" { 
+Shader "Unity Shaders Book/Chapter 5/ Simple Shader" { 
 	Properties { 
 		// 声明 一个 Color 类型 的 属性 
 		_Color ("Color Tint",Color) = (1.0, 1.0, 1.0, 1.0) 
