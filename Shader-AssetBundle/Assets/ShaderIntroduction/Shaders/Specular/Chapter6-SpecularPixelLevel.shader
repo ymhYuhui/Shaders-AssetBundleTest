@@ -54,7 +54,6 @@ Shader "Unity Shaders Book/Chapter 6/SpecularPixelLevel" {
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
 
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
-                //--------------------------------
 
                 //获取入射光反射方向
                 fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
