@@ -53,8 +53,9 @@ Shader "Unity Shaders Book/Chapter 6/HalfLambert" {
                 //计算漫反射->公式：
                 //C diffuse = (C light * M diffuse) * max(0,n·l)
                 //漫反射 = （光强 * 材质的漫反射系数）* max（表面法线 · 光源方向）
-
+                //半兰伯特是将本来映射在[0，1]内的值映射至[0.5，1]
                fixed halfLambert = dot(worldNormal, worldLightDir) * 0.5 + 0.5;
+
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * halfLambert;
 
                 fixed3 color = ambient + diffuse;
